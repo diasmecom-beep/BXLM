@@ -1,5 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="10" fill="#0c0b0a"/>
-  <text x="32" y="34" text-anchor="middle" dominant-baseline="central"
-        font-family="Arial Black, Arial, sans-serif" font-weight="800" font-size="32" fill="#f4f2ef">B<tspan fill="#c1272d">X</tspan></text>
+  <rect width="64" height="64" rx="12" fill="#0c0b0a"/>
+  <g font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif" font-weight="900" font-size="25" text-anchor="middle" letter-spacing="-1.5">
+    <text x="33" y="27" fill="#f4f2ef">B<tspan fill="#c1272d">X</tspan></text>
+    <text x="33" y="52" fill="#f4f2ef">LM</text>
+  </g>
 </svg>
