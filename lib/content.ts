@@ -9,10 +9,10 @@
 
 export const site = {
   /** URL de production (sans slash final). Sert au SEO et aux liens de partage. */
-  url: "https://bxlm-livre.vercel.app",
+  url: "https://bxlm-five.vercel.app",
 
-  /** Adresse vers laquelle pointent tous les boutons de commande. À REMPLACER. */
-  orderEmail: "contact@bxlm-livre.be",
+  /** Adresse vers laquelle pointent tous les boutons de commande. */
+  orderEmail: "hello@bxlm.be",
 };
 
 export const book = {
