@@ -1,0 +1,22 @@
+{
+  "name": "bxlm-vitrine",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Page vitrine du livre BXLM (Tayino Chérubin & Dido Lakama) à destination des organismes pédagogiques.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^16.3.3",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@types/node": "22.10.7",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.5",
+    "typescript": "5.7.3"
+  }
+}
