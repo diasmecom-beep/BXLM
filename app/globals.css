@@ -579,6 +579,238 @@ h2.section-title {
   color: var(--ink);
   font-size: 1rem;
 }
+.card-actions {
+  display: flex;
+  gap: 1.1rem;
+  flex-wrap: wrap;
+}
+.card-link {
+  font-family: var(--font-util);
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--ink-soft);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--line);
+}
+.card-link:hover {
+  color: var(--ink);
+  text-decoration-color: var(--ink);
+}
+.card-link-accent {
+  color: var(--red-ink);
+  text-decoration-color: currentColor;
+}
+.card-link-accent:hover {
+  color: var(--red);
+}
+
+/* ---------- pedagogy modal (info + booking form) ---------- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(9, 8, 8, 0.6);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 6vh 1.2rem;
+  overflow-y: auto;
+}
+.modal {
+  position: relative;
+  background: var(--paper);
+  color: var(--ink);
+  max-width: 44rem;
+  width: 100%;
+  padding: 2.4rem 2.2rem 2.2rem;
+  border: 1px solid var(--line);
+  box-shadow: 10px 10px 0 var(--red);
+}
+@media (max-width: 640px) {
+  .modal {
+    padding: 2rem 1.3rem 1.8rem;
+    box-shadow: 6px 6px 0 var(--red);
+  }
+}
+.modal-close {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.9rem;
+  background: none;
+  border: none;
+  font-size: 1.9rem;
+  line-height: 1;
+  color: var(--ink-soft);
+  cursor: pointer;
+  padding: 0.3rem 0.5rem;
+}
+.modal-close:hover {
+  color: var(--ink);
+}
+.modal-eyebrow {
+  margin-bottom: 0.6rem;
+}
+.modal-title {
+  font-size: clamp(1.5rem, 3.6vw, 2rem);
+  margin-bottom: 0.8rem;
+  padding-right: 1.6rem;
+}
+.modal-lead {
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+  line-height: 1.5;
+  margin-bottom: 1.6rem;
+}
+
+.price-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  margin-bottom: 1.6rem;
+}
+@media (min-width: 560px) {
+  .price-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.price-card {
+  background: var(--paper);
+  padding: 1.1rem 1.2rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.price-card-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.6rem;
+}
+.price-card-head h4 {
+  font-family: var(--font-util);
+  font-weight: 700;
+  font-size: 0.96rem;
+}
+.price-tag {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--red-ink);
+  white-space: nowrap;
+}
+.price-meta {
+  font-family: var(--font-util);
+  font-size: 0.74rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.price-details {
+  font-size: 0.94rem;
+  color: var(--ink-soft);
+  line-height: 1.45;
+}
+.btn-sm {
+  margin-top: 0.3rem;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.72rem;
+  align-self: flex-start;
+}
+
+.logistics-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.1rem;
+}
+.logistics-list li {
+  padding-left: 1.2rem;
+  position: relative;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+.logistics-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 0.6rem;
+  height: 1px;
+  background: var(--red);
+}
+.modal-note {
+  font-family: var(--font-util);
+  font-size: 0.76rem;
+  color: var(--ink-soft);
+  border-top: 1px dashed var(--line);
+  padding-top: 0.9rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 1.2rem;
+  margin-bottom: 1.6rem;
+}
+@media (max-width: 560px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+.form-field-wide {
+  grid-column: 1 / -1;
+}
+.form-field span {
+  font-family: var(--font-util);
+  font-weight: 600;
+  font-size: 0.74rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.form-field input,
+.form-field select,
+.form-field textarea {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--ink);
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  padding: 0.55rem 0.7rem;
+}
+.form-field textarea {
+  resize: vertical;
+}
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline: 2px solid var(--red);
+  outline-offset: 1px;
+}
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
 
 /* ---------- specs ---------- */
 .specs {

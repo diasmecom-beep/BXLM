@@ -170,48 +170,108 @@ export const timeline: { when: string; title: string; text: string }[] = [
 
 /** Les six portes d'entrée pédagogiques. */
 export const entryPoints: {
+  id: string;
   k: string;
   title: string;
   text: string;
   question: string;
 }[] = [
   {
+    id: "institutions",
     k: "Institutions",
     title: "Violences policières & État",
     text: "Comment manifester contre la police tout en négociant avec elle le maintien de l’ordre ? Le livre montre ce dilemme en temps réel.",
     question: "Peut-on collaborer avec une institution que l’on conteste ?",
   },
   {
+    id: "racisme",
     k: "Racisme",
     title: "Négrophobie & racisme structurel",
     text: "Logement, santé mentale, école, emploi : la manifestation lie les violences policières à un système plus large.",
     question: "Qu’est-ce qui distingue un préjugé d’un racisme structurel ?",
   },
   {
+    id: "memoire",
     k: "Mémoire",
     title: "Colonialité & récit national",
     text: "Du Code noir aux regrets du Roi Philippe : quelle place l’histoire coloniale occupe-t-elle dans l’espace public ?",
     question: "Qui a le droit de raconter cette histoire ?",
   },
   {
+    id: "citoyennete",
     k: "Citoyenneté",
     title: "Éducation à la citoyenneté mondiale",
     text: "Le « Sud » au « Nord » et inversement : identités plurielles, diasporas, liens avec les terres d’origine.",
     question: "De quoi ai-je hérité, et qu’est-ce que je choisis ?",
   },
   {
+    id: "mouvements",
     k: "Mouvements",
     title: "Organiser & se faire déposséder",
     text: "Récupération médiatique, guerre des leaderships, rôle des réseaux sociaux dans l’emballement comme dans l’apaisement.",
     question: "À qui appartient un mouvement social ?",
   },
   {
+    id: "solidarites",
     k: "Solidarités",
     title: "Alliances intercommunautaires",
     text: "Tensions entre jeunes maghrébins et subsahariens, place des femmes, des militant·es LGBTQIA+, des écologistes de terrain.",
     question: "Qu’est-ce qui fait tenir une alliance fragile ?",
   },
 ];
+
+/**
+ * Formations proposées par les auteurs, déclinables sur chacune des six
+ * portes d'entrée. Grille indicative — à ajuster librement ici.
+ */
+export const training = {
+  intro:
+    "Chaque porte d’entrée peut se prolonger en atelier ou en formation avec les auteurs, adaptée à votre groupe.",
+  formats: [
+    {
+      id: "decouverte",
+      name: "Atelier découverte",
+      duration: "2 h",
+      audience: "1 classe ou 1 groupe (30 pers. max)",
+      price: "180 €",
+      details:
+        "Lecture d’extraits et discussion guidée autour de la porte d’entrée choisie. Présentiel ou distanciel.",
+    },
+    {
+      id: "approfondi",
+      name: "Atelier approfondi",
+      duration: "Demi-journée (3 h 30)",
+      audience: "1 à 2 groupes",
+      price: "320 €",
+      details:
+        "Atelier suivi d’une activité pratique (débat mouvant, écriture, analyse de sources). Présentiel.",
+    },
+    {
+      id: "journee",
+      name: "Journée pédagogique",
+      duration: "Journée complète (6 h)",
+      audience: "Établissement (plusieurs classes)",
+      price: "550 €",
+      details:
+        "Plusieurs ateliers dans la journée et restitution collective, en présence des auteurs.",
+    },
+    {
+      id: "formation-continue",
+      name: "Cycle formation continue",
+      duration: "3 séances de 2 h",
+      audience: "Équipes pédagogiques ou formateur·ices",
+      price: "950 € (forfait)",
+      details:
+        "Cycle destiné aux enseignant·es et formateur·ices pour s’approprier les six portes d’entrée.",
+    },
+  ],
+  logistics: [
+    "Déplacement inclus en Région bruxelloise ; au-delà, forfait kilométrique en sus, précisé au devis.",
+    "Réservation conseillée 4 à 6 semaines à l’avance (8 semaines pour une journée ou un cycle).",
+    "Tarif adaptable pour les associations à budget réduit — n’hésitez pas à nous consulter.",
+  ],
+  note: "Grille indicative 2026. Devis personnalisé envoyé sous 5 jours ouvrés selon la porte d’entrée et la formule choisies.",
+};
 
 export const whyPoints: { title: string; text: string }[] = [
   {

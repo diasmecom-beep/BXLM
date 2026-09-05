@@ -1,14 +1,6 @@
 import Image from "next/image";
-import {
-  site,
-  book,
-  specs,
-  offers,
-  timeline,
-  entryPoints,
-  whyPoints,
-  mailto,
-} from "@/lib/content";
+import { site, book, specs, offers, timeline, whyPoints, mailto } from "@/lib/content";
+import PedagogyCards from "@/components/PedagogyCards";
 
 import heroImg from "./assets/hero.jpg";
 import coverImg from "./assets/cover.jpg";
@@ -202,16 +194,7 @@ export default function Page() {
             </div>
 
             <h3 className="subhead">Six portes d’entrée en classe</h3>
-            <div className="cards">
-              {entryPoints.map((c, i) => (
-                <div className="card" key={i}>
-                  <span className="k">{c.k}</span>
-                  <h3>{c.title}</h3>
-                  <p>{c.text}</p>
-                  <p className="q">{c.question}</p>
-                </div>
-              ))}
-            </div>
+            <PedagogyCards />
           </div>
         </section>
 
