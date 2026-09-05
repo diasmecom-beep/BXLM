@@ -245,7 +245,10 @@ export default function Page() {
             <div className="offer">
               <article>
                 <span className="k">{offers.ebook.kicker}</span>
-                <h3>{offers.ebook.title}</h3>
+                <div className="offer-head">
+                  <h3>{offers.ebook.title}</h3>
+                  <span className="offer-price">{offers.ebook.price}</span>
+                </div>
                 <p className="fmt">{offers.ebook.format}</p>
                 <ul>
                   {offers.ebook.lines.map((l, i) => (
@@ -266,7 +269,10 @@ export default function Page() {
 
               <article className="feat">
                 <span className="k">{offers.paper.kicker}</span>
-                <h3>{offers.paper.title}</h3>
+                <div className="offer-head">
+                  <h3>{offers.paper.title}</h3>
+                  <span className="offer-price">{offers.paper.price}</span>
+                </div>
                 <p className="fmt">{offers.paper.format}</p>
                 <ul>
                   {offers.paper.lines.map((l, i) => (

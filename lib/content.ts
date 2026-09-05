@@ -50,17 +50,23 @@ export const offers = {
     kicker: "Numérique",
     title: "E-book",
     format: "EPUB + PDF · sans DRM",
+    /** Prix affiché. `priceCents` sert de base pour un futur paiement en ligne (Stripe). */
+    price: "10 €",
+    priceCents: 1000,
     lines: [
-      { strong: "Licence individuelle", rest: " — un lecteur, tous ses appareils" },
+      {
+        strong: "Licence individuelle",
+        rest: " — 10 €, un lecteur, tous ses appareils",
+      },
       {
         strong: "Licence établissement",
-        rest: " — diffusion interne à une classe, un cours, un groupe",
+        rest: " — diffusion interne à une classe, un cours, un groupe, tarif sur demande",
       },
       { strong: "", rest: "Extrait de consultation envoyé sur simple demande" },
       { strong: "", rest: "Livraison par lien de téléchargement sous 48 h" },
     ],
     cta: "Demander l’e-book",
-    note: "Tarif communiqué selon le type de licence.",
+    note: "10 € en licence individuelle. Licence établissement : tarif sur demande.",
     mailSubject: "BXLM — demande e-book",
     mailBody: [
       "Bonjour,",
@@ -79,14 +85,17 @@ export const offers = {
     kicker: "Imprimé",
     title: "Version papier",
     format: "Poche 105 × 175 mm · 64 p.",
+    /** Prix affiché (à l'unité). `priceCents` sert de base pour un futur paiement en ligne (Stripe). */
+    price: "12 €",
+    priceCents: 1200,
     lines: [
-      { strong: "À l’unité", rest: " — pour découvrir ou offrir" },
-      { strong: "Lot classe (10 ex.)", rest: " — tarif dégressif" },
-      { strong: "Lot atelier (30 ex.)", rest: " — tarif dégressif renforcé" },
+      { strong: "À l’unité", rest: " — 12 €, pour découvrir ou offrir" },
+      { strong: "Lot classe (10 ex.)", rest: " — tarif dégressif, sur devis" },
+      { strong: "Lot atelier (30 ex.)", rest: " — tarif dégressif renforcé, sur devis" },
       { strong: "", rest: "Facture et bon de commande pour les établissements" },
     ],
     cta: "Commander la version papier",
-    note: "Frais de port calculés selon la destination et la quantité.",
+    note: "12 € l’unité + frais de port selon la destination. Tarif dégressif par lot sur devis.",
     mailSubject: "BXLM — commande version papier",
     mailBody: [
       "Bonjour,",

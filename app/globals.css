@@ -868,10 +868,23 @@ h2.section-title {
   text-transform: uppercase;
   color: var(--red-ink);
 }
+.offer-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.8rem;
+  margin: 0.5rem 0 0.2rem;
+}
 .offer h3 {
   font-size: 1.75rem;
   font-weight: 600;
-  margin: 0.5rem 0 0.2rem;
+}
+.offer-price {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.8rem;
+  color: var(--red-ink);
+  white-space: nowrap;
 }
 .offer .fmt {
   font-family: var(--font-util);
