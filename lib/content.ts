@@ -9,7 +9,7 @@
 
 export const site = {
   /** URL de production (sans slash final). Sert au SEO et aux liens de partage. */
-  url: "https://bxlm-five.vercel.app",
+  url: "https://www.bxlm.site",
 
   /** Adresse vers laquelle pointent tous les boutons de commande. */
   orderEmail: "hello@bxlm.be",
