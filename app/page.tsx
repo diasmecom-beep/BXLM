@@ -258,12 +258,20 @@ export default function Page() {
                     </li>
                   ))}
                 </ul>
-                <a
-                  className="btn btn-outline"
-                  href={mailto(offers.ebook.mailSubject, offers.ebook.mailBody)}
-                >
-                  {offers.ebook.cta}
-                </a>
+                <div className="offer-actions">
+                  <a
+                    className="btn btn-primary"
+                    href={offers.ebook.paymentLink}
+                  >
+                    {offers.ebook.paymentCta}
+                  </a>
+                  <a
+                    className="btn btn-outline"
+                    href={mailto(offers.ebook.mailSubject, offers.ebook.mailBody)}
+                  >
+                    {offers.ebook.mailCta}
+                  </a>
+                </div>
                 <p className="note">{offers.ebook.note}</p>
               </article>
 
@@ -282,12 +290,20 @@ export default function Page() {
                     </li>
                   ))}
                 </ul>
-                <a
-                  className="btn btn-dark"
-                  href={mailto(offers.paper.mailSubject, offers.paper.mailBody)}
-                >
-                  {offers.paper.cta}
-                </a>
+                <div className="offer-actions">
+                  <a
+                    className="btn btn-primary"
+                    href={offers.paper.paymentLink}
+                  >
+                    {offers.paper.paymentCta}
+                  </a>
+                  <a
+                    className="btn btn-outline"
+                    href={mailto(offers.paper.mailSubject, offers.paper.mailBody)}
+                  >
+                    {offers.paper.mailCta}
+                  </a>
+                </div>
                 <p className="note">{offers.paper.note}</p>
               </article>
             </div>

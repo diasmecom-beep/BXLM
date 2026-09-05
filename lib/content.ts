@@ -50,9 +50,15 @@ export const offers = {
     kicker: "Numérique",
     title: "E-book",
     format: "EPUB + PDF · sans DRM",
-    /** Prix affiché. `priceCents` sert de base pour un futur paiement en ligne (Stripe). */
     price: "10 €",
     priceCents: 1000,
+    /**
+     * Lien de paiement Stripe (Payment Link). Actuellement en MODE TEST —
+     * aucun paiement réel n'est débité. Voir README.md § 5 pour passer en
+     * production.
+     */
+    paymentLink: "https://buy.stripe.com/test_3cI5kD6mv63ql3v1i7ffy00",
+    paymentCta: "Payer 10 € — recevoir l’e-book",
     lines: [
       {
         strong: "Licence individuelle",
@@ -65,8 +71,8 @@ export const offers = {
       { strong: "", rest: "Extrait de consultation envoyé sur simple demande" },
       { strong: "", rest: "Livraison par lien de téléchargement sous 48 h" },
     ],
-    cta: "Demander l’e-book",
-    note: "10 € en licence individuelle. Licence établissement : tarif sur demande.",
+    mailCta: "Licence établissement / devis",
+    note: "10 € en licence individuelle, paiement sécurisé par Stripe — l’e-book arrive par e-mail dans les minutes qui suivent. Licence établissement : tarif sur demande.",
     mailSubject: "BXLM — demande e-book",
     mailBody: [
       "Bonjour,",
@@ -85,17 +91,22 @@ export const offers = {
     kicker: "Imprimé",
     title: "Version papier",
     format: "Poche 105 × 175 mm · 64 p.",
-    /** Prix affiché (à l'unité). `priceCents` sert de base pour un futur paiement en ligne (Stripe). */
     price: "12 €",
     priceCents: 1200,
+    /**
+     * Lien de paiement Stripe (Payment Link), collecte l'adresse de
+     * livraison. MODE TEST — voir README.md § 5 pour passer en production.
+     */
+    paymentLink: "https://buy.stripe.com/test_dRm9AT7qz2RebI9gd1ffy01",
+    paymentCta: "Payer 12 € — commander l’exemplaire",
     lines: [
       { strong: "À l’unité", rest: " — 12 €, pour découvrir ou offrir" },
       { strong: "Lot classe (10 ex.)", rest: " — tarif dégressif, sur devis" },
       { strong: "Lot atelier (30 ex.)", rest: " — tarif dégressif renforcé, sur devis" },
       { strong: "", rest: "Facture et bon de commande pour les établissements" },
     ],
-    cta: "Commander la version papier",
-    note: "12 € l’unité + frais de port selon la destination. Tarif dégressif par lot sur devis.",
+    mailCta: "Lot classe / devis",
+    note: "12 € l’unité, port compris, paiement sécurisé par Stripe. Tarif dégressif par lot sur devis.",
     mailSubject: "BXLM — commande version papier",
     mailBody: [
       "Bonjour,",

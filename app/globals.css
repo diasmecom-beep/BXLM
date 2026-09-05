@@ -919,8 +919,13 @@ h2.section-title {
   color: var(--ink);
   font-weight: 600;
 }
-.offer .btn {
+.offer-actions {
   margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.offer .btn {
   justify-content: center;
 }
 .offer .note {
