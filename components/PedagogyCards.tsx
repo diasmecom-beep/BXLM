@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, type FormEvent } from "react";
+import { createPortal } from "react-dom";
 import { site, entryPoints, training } from "@/lib/content";
 
 type EntryPoint = (typeof entryPoints)[number];
@@ -65,48 +66,50 @@ export default function PedagogyCards() {
         ))}
       </div>
 
-      {active && (
-        <div
-          className="modal-overlay"
-          onMouseDown={(e) => {
-            if (e.target === e.currentTarget) setActive(null);
-          }}
-        >
+      {active &&
+        createPortal(
           <div
-            className="modal"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="modal-title"
+            className="modal-overlay"
+            onMouseDown={(e) => {
+              if (e.target === e.currentTarget) setActive(null);
+            }}
           >
-            <button
-              type="button"
-              className="modal-close"
-              onClick={() => setActive(null)}
-              aria-label="Fermer"
+            <div
+              className="modal"
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="modal-title"
             >
-              ×
-            </button>
+              <button
+                type="button"
+                className="modal-close"
+                onClick={() => setActive(null)}
+                aria-label="Fermer"
+              >
+                ×
+              </button>
 
-            {view === "info" && (
-              <InfoView
-                entry={active}
-                onReserve={(fmt) => openForm(active, fmt)}
-              />
-            )}
-            {view === "form" && (
-              <FormView
-                entry={active}
-                formatId={formatId}
-                onBack={() => setView("info")}
-                onSent={() => setView("sent")}
-              />
-            )}
-            {view === "sent" && (
-              <SentView entry={active} onBack={() => setView("form")} />
-            )}
-          </div>
-        </div>
-      )}
+              {view === "info" && (
+                <InfoView
+                  entry={active}
+                  onReserve={(fmt) => openForm(active, fmt)}
+                />
+              )}
+              {view === "form" && (
+                <FormView
+                  entry={active}
+                  formatId={formatId}
+                  onBack={() => setView("info")}
+                  onSent={() => setView("sent")}
+                />
+              )}
+              {view === "sent" && (
+                <SentView entry={active} onBack={() => setView("form")} />
+              )}
+            </div>
+          </div>,
+          document.body,
+        )}
     </>
   );
 }
