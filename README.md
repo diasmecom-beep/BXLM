@@ -6,8 +6,7 @@ en classe, commande de l'e-book et de la version papier.
 
 Construit avec **Next.js 16** (App Router) + TypeScript. Pas de base de données :
 les formulaires de formation ouvrent un e-mail pré-rempli, et l'achat du livre
-passe par des **Stripe Payment Links** (carte, Bancontact, iDEAL, Klarna,
-PayPal…). Un webhook Stripe envoie automatiquement l'e-book par e-mail dès
+passe par des **Stripe Payment Links** (carte, Bancontact, iDEAL, PayPal…). Un webhook Stripe envoie automatiquement l'e-book par e-mail dès
 qu'un paiement e-book est confirmé — voir **section 5**.
 
 ---
@@ -18,7 +17,7 @@ Tout le contenu modifiable est regroupé dans **`lib/content.ts`** :
 
 | À changer | Où |
 | --- | --- |
-| Adresse e-mail de commande | `site.orderEmail` (actuellement `hello@bxlm.be`) |
+| Adresse e-mail de commande | `site.orderEmail` (actuellement `hello@bxlm.site`) |
 | URL de production (SEO / partage) | `site.url` |
 | Tarifs, mentions, texte des offres | `offers.ebook`, `offers.paper` |
 | Formules de formation (portes d'entrée) | `training` |
@@ -108,7 +107,7 @@ public/
    (créés dans le tableau de bord Stripe → Payment Links, un pour l'e-book à
    10 €, un pour la version papier à 12 € avec collecte d'adresse de
    livraison). Stripe gère seul l'affichage des moyens de paiement
-   disponibles (carte, Bancontact, iDEAL, Klarna, PayPal…).
+   disponibles (carte, Bancontact, iDEAL, PayPal…).
 2. Chaque produit Stripe porte une **métadonnée `sku`** (`ebook` ou `paper`)
    — c'est ce qui permet au code de savoir quoi faire après paiement, sans
    dépendre d'un identifiant de prix qui change entre le mode test et le
@@ -130,7 +129,7 @@ Project → **Settings → Environment Variables** (type **Secret**) :
 | `STRIPE_SECRET_KEY` | Stripe → Developers → API keys (une **clé restreinte**, lecture seule, suffit) |
 | `STRIPE_WEBHOOK_SECRET` | Stripe → Developers → Webhooks → votre endpoint → « Signing secret » |
 | `RESEND_API_KEY` | [resend.com](https://resend.com) → API Keys |
-| `RESEND_FROM_EMAIL` *(optionnel)* | une adresse sur un domaine vérifié dans Resend, ex. `hello@bxlm.be`. Sans cette variable, les e-mails partent de `onboarding@resend.dev` (fonctionne sans vérification de domaine, mais moins pro). |
+| `RESEND_FROM_EMAIL` *(optionnel)* | une adresse sur un domaine vérifié dans Resend, ex. `hello@bxlm.site`. Sans cette variable, les e-mails partent de `onboarding@resend.dev` (fonctionne sans vérification de domaine, mais moins pro). |
 
 `BLOB_READ_WRITE_TOKEN` et les autres variables `BLOB_*` sont ajoutées
 automatiquement par Vercel lors de la connexion du store Blob au projet —

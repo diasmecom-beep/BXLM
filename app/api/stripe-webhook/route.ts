@@ -16,8 +16,8 @@ const EBOOK_BLOB_PATH = "ebooks/bxlm.pdf";
 /**
  * Adresse d'expédition des e-mails. Sans domaine vérifié sur Resend,
  * seule l'adresse de test "onboarding@resend.dev" fonctionne. Une fois
- * un domaine vérifié (ex. bxlm.be), définissez RESEND_FROM_EMAIL dans
- * les variables d'environnement Vercel (ex. "hello@bxlm.be").
+ * un domaine vérifié (ex. bxlm.site), définissez RESEND_FROM_EMAIL dans
+ * les variables d'environnement Vercel (ex. "hello@bxlm.site").
  */
 const FROM_EMAIL = process.env.RESEND_FROM_EMAIL ?? "onboarding@resend.dev";
 
@@ -121,7 +121,7 @@ export async function POST(req: NextRequest) {
         "<p>Bonjour,</p>",
         "<p>Merci pour votre achat ! Vous trouverez le livre <strong>BXLM</strong>",
         " (Tayino Chérubin &amp; Dido Lakama) en pièce jointe, au format PDF.</p>",
-        "<p>Une question ? Écrivez-nous à hello@bxlm.be.</p>",
+        "<p>Une question ? Écrivez-nous à hello@bxlm.site.</p>",
         "<p>Bonne lecture,<br>L'équipe BXLM</p>",
       ].join(""),
       attachments: [

@@ -226,23 +226,22 @@ export default function Page() {
           </figcaption>
         </section>
 
-        {/* ---------- BANDE VIDÉO ---------- */}
+        {/* ---------- BANDE VIDÉO (extrait) ---------- */}
         <section className="band" aria-label="Vidéo">
           <div className="video-frame">
             <iframe
-              src={`https://www.youtube-nocookie.com/embed/videoseries?list=${video.playlistId}`}
+              src={`https://www.youtube-nocookie.com/embed/${video.videoId}?start=0&end=${video.endSeconds}&rel=0&modestbranding=1`}
               title={video.title}
               loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             />
           </div>
           <figcaption className="band-cap">
-            <b>{video.title}.</b> <span className="hash">{video.qrNote}</span>
-            <br />
-            <a className="band-link" href={video.playlistUrl} target="_blank" rel="noreferrer">
-              {video.watchCta} ↗
-            </a>
+            <b>
+              Extrait du documentaire {video.title} — {video.credit}.
+            </b>{" "}
+            <span className="hash">{video.qrNote}</span>
           </figcaption>
         </section>
 

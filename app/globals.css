@@ -468,19 +468,6 @@ h2.section-title {
   color: var(--red);
   font-weight: 600;
 }
-.band-link {
-  display: inline-block;
-  margin-top: 0.7rem;
-  font-weight: 600;
-  color: var(--on-black);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  text-decoration-color: var(--red);
-}
-.band-link:hover {
-  color: var(--red-ink);
-}
-
 .video-frame {
   position: relative;
   aspect-ratio: 16 / 9;

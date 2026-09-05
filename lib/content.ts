@@ -12,7 +12,7 @@ export const site = {
   url: "https://www.bxlm.site",
 
   /** Adresse vers laquelle pointent tous les boutons de commande. */
-  orderEmail: "hello@bxlm.be",
+  orderEmail: "hello@bxlm.site",
 };
 
 export const book = {
@@ -41,15 +41,17 @@ export const specs: { label: string; value: string }[] = [
   { label: "Langue", value: book.language },
 ];
 
-/** Bande vidéo : extraits filmés du rassemblement, en écho au QR code imprimé dans le livre. */
+/** Bande vidéo : court extrait du documentaire de Change asbl, en écho au QR code imprimé dans le livre. */
 export const video = {
-  title: "Images du 7 juin 2020",
-  /** Identifiant de la playlist YouTube (partie après "list=" dans l'URL). */
-  playlistId: "PLa_GZ_ucq-n4iDx5PhiyEXv6tK9g9nGlb",
-  playlistUrl:
-    "https://www.youtube.com/playlist?list=PLa_GZ_ucq-n4iDx5PhiyEXv6tK9g9nGlb",
-  qrNote: "Disponible via un QR code dans chaque exemplaire du livre",
-  watchCta: "Voir la playlist complète",
+  /** Titre du documentaire (chaîne Change asbl). */
+  title: "« Black Lives Matter à Bruxelles »",
+  credit: "Change asbl",
+  /** Identifiant de la vidéo YouTube. */
+  videoId: "ZlxD0LqvtH8",
+  /** Fin de l'extrait affiché sur le site, en secondes (1 min 33). */
+  endSeconds: 93,
+  qrNote:
+    "Vidéo complète disponible via un QR code dans chaque exemplaire du livre",
 };
 
 /**
