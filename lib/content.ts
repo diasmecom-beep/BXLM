@@ -46,10 +46,12 @@ export const video = {
   /** Titre du documentaire (chaîne Change asbl). */
   title: "« Black Lives Matter à Bruxelles »",
   credit: "Change asbl",
-  /** Identifiant de la vidéo YouTube. */
-  videoId: "ZlxD0LqvtH8",
-  /** Fin de l'extrait affiché sur le site, en secondes (1 min 33). */
-  endSeconds: 93,
+  /**
+   * Fichier vidéo (dans public/). Pour le remplacer : déposez le nouveau
+   * fichier dans public/ et mettez à jour ces deux chemins.
+   */
+  fileSrc: "/extrait-documentaire.mp4",
+  poster: "/extrait-poster.jpg",
   qrNote:
     "Vidéo complète disponible via un QR code dans chaque exemplaire du livre",
 };

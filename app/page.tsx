@@ -229,13 +229,15 @@ export default function Page() {
         {/* ---------- BANDE VIDÉO (extrait) ---------- */}
         <section className="band" aria-label="Vidéo">
           <div className="video-frame">
-            <iframe
-              src={`https://www.youtube-nocookie.com/embed/${video.videoId}?start=0&end=${video.endSeconds}&rel=0&modestbranding=1`}
+            <video
+              controls
+              preload="metadata"
+              playsInline
+              poster={video.poster}
               title={video.title}
-              loading="lazy"
-              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            />
+            >
+              <source src={video.fileSrc} type="video/mp4" />
+            </video>
           </div>
           <figcaption className="band-cap">
             <b>
