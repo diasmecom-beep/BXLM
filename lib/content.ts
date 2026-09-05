@@ -41,6 +41,17 @@ export const specs: { label: string; value: string }[] = [
   { label: "Langue", value: book.language },
 ];
 
+/** Bande vidéo : extraits filmés du rassemblement, en écho au QR code imprimé dans le livre. */
+export const video = {
+  title: "Images du 7 juin 2020",
+  /** Identifiant de la playlist YouTube (partie après "list=" dans l'URL). */
+  playlistId: "PLa_GZ_ucq-n4iDx5PhiyEXv6tK9g9nGlb",
+  playlistUrl:
+    "https://www.youtube.com/playlist?list=PLa_GZ_ucq-n4iDx5PhiyEXv6tK9g9nGlb",
+  qrNote: "Disponible via un QR code dans chaque exemplaire du livre",
+  watchCta: "Voir la playlist complète",
+};
+
 /**
  * Offres. `price` s'affiche tel quel — mettez le montant (« 9 € »)
  * ou laissez une mention comme « sur demande ».
@@ -164,7 +175,7 @@ export const timeline: { when: string; title: string; text: string }[] = [
   {
     when: "1–6 juin",
     title: "Une semaine de tractations",
-    text: "Des dizaines d’associations se réunissent chez Change asbl. Les autorités fédérales s’opposent au rassemblement ; la Ville de Bruxelles finit par le tolérer en se déresponsabilisant à l’avance.",
+    text: "Des dizaines d’associations se réunissent chez Change asbl. Les autorités fédérales s’opposent officiellement au rassemblement ; la pression sur les épaules des organisateurs atteint son paroxysme.",
   },
   {
     when: "6 juin",

@@ -1,5 +1,14 @@
 import Image from "next/image";
-import { site, book, specs, offers, timeline, whyPoints, mailto } from "@/lib/content";
+import {
+  site,
+  book,
+  specs,
+  offers,
+  timeline,
+  whyPoints,
+  video,
+  mailto,
+} from "@/lib/content";
 import PedagogyCards from "@/components/PedagogyCards";
 
 import heroImg from "./assets/hero.jpg";
@@ -214,6 +223,26 @@ export default function Page() {
             son expulsion par la police à Roeselare. Son histoire, longtemps
             ignorée, a été portée au micro le 7 juin.{" "}
             <span className="hash">#JusticePourLamineBangoura</span>
+          </figcaption>
+        </section>
+
+        {/* ---------- BANDE VIDÉO ---------- */}
+        <section className="band" aria-label="Vidéo">
+          <div className="video-frame">
+            <iframe
+              src={`https://www.youtube-nocookie.com/embed/videoseries?list=${video.playlistId}`}
+              title={video.title}
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          </div>
+          <figcaption className="band-cap">
+            <b>{video.title}.</b> <span className="hash">{video.qrNote}</span>
+            <br />
+            <a className="band-link" href={video.playlistUrl} target="_blank" rel="noreferrer">
+              {video.watchCta} ↗
+            </a>
           </figcaption>
         </section>
 
