@@ -138,10 +138,10 @@ rien à faire manuellement pour celles-ci.
 ### Mettre à jour le fichier e-book
 
 L'EPUB vendu est stocké dans le store Vercel Blob **`bxlm-blob`**, sous le
-chemin `ebooks/bxlm.epub` (accès **privé** — personne ne peut le télécharger
+chemin `ebooks/BXLM.site.epub` (accès **privé** — personne ne peut le télécharger
 sans passer par un paiement). Pour le remplacer : Vercel → Storage →
 `bxlm-blob` → Manage Blobs → uploadez le nouveau fichier au même chemin
-(`ebooks/bxlm.epub`), ou changez `EBOOK_BLOB_PATH` dans
+(`ebooks/BXLM.site.epub`), ou changez `EBOOK_BLOB_PATH` dans
 `app/api/stripe-webhook/route.ts` si vous préférez un autre chemin.
 
 ### Passer du mode test au mode production Stripe

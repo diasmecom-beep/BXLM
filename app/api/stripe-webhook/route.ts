@@ -11,7 +11,7 @@ export const runtime = "nodejs";
  * Chemin du fichier e-book (EPUB) dans le store Vercel Blob (privé).
  * Voir README.md pour la procédure d'upload.
  */
-const EBOOK_BLOB_PATH = "ebooks/bxlm.epub";
+const EBOOK_BLOB_PATH = "ebooks/BXLM.site.epub";
 const EBOOK_FILENAME = "BXLM.epub";
 
 /**
