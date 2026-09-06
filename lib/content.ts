@@ -72,7 +72,7 @@ export const offers = {
      * aucun paiement réel n'est débité. Voir README.md § 5 pour passer en
      * production.
      */
-    paymentLink: "https://buy.stripe.com/test_3cI5kD6mv63ql3v1i7ffy00",
+    paymentLink: "https://buy.stripe.com/test_3cI5kD6mv63q13v1i7ffy00",
     paymentCta: "Payer 10 € — recevoir l’e-book",
     lines: [
       {
