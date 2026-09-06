@@ -64,7 +64,7 @@ export const offers = {
   ebook: {
     kicker: "Numérique",
     title: "E-book",
-    format: "EPUB + PDF · sans DRM",
+    format: "EPUB · sans DRM",
     price: "10 €",
     priceCents: 1000,
     /**
@@ -92,7 +92,7 @@ export const offers = {
     mailBody: [
       "Bonjour,",
       "",
-      "Je souhaite obtenir l'e-book BXLM (EPUB + PDF).",
+      "Je souhaite obtenir l'e-book BXLM (EPUB).",
       "",
       "- Type de licence souhaité : individuelle / établissement",
       "- Organisme :",

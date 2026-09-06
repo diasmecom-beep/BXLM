@@ -8,10 +8,11 @@ import { head } from "@vercel/blob";
 export const runtime = "nodejs";
 
 /**
- * Chemin du fichier e-book dans le store Vercel Blob (privé).
+ * Chemin du fichier e-book (EPUB) dans le store Vercel Blob (privé).
  * Voir README.md pour la procédure d'upload.
  */
-const EBOOK_BLOB_PATH = "ebooks/bxlm.pdf";
+const EBOOK_BLOB_PATH = "ebooks/bxlm.epub";
+const EBOOK_FILENAME = "BXLM.epub";
 
 /**
  * Adresse d'expédition des e-mails. Sans domaine vérifié sur Resend,
@@ -120,13 +121,14 @@ export async function POST(req: NextRequest) {
       html: [
         "<p>Bonjour,</p>",
         "<p>Merci pour votre achat ! Vous trouverez le livre <strong>BXLM</strong>",
-        " (Tayino Chérubin &amp; Dido Lakama) en pièce jointe, au format PDF.</p>",
+        " (Tayino Chérubin &amp; Dido Lakama) en pièce jointe, au format EPUB",
+        " (lisible sur liseuse, tablette, smartphone ou ordinateur).</p>",
         "<p>Une question ? Écrivez-nous à hello@bxlm.site.</p>",
         "<p>Bonne lecture,<br>L'équipe BXLM</p>",
       ].join(""),
       attachments: [
         {
-          filename: "BXLM.pdf",
+          filename: EBOOK_FILENAME,
           content: Buffer.from(arrayBuffer),
         },
       ],

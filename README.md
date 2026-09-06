@@ -114,7 +114,7 @@ public/
    mode production.
 3. À chaque paiement réussi, Stripe appelle le webhook
    `app/api/stripe-webhook/route.ts`. S'il s'agit de l'e-book, le serveur
-   récupère le PDF stocké sur **Vercel Blob** (privé) et l'envoie par e-mail
+   récupère l'EPUB stocké sur **Vercel Blob** (privé) et l'envoie par e-mail
    via **Resend**, à l'adresse indiquée par l'acheteur au paiement.
 4. Pour la version papier, rien n'est automatisé (expédition physique) :
    la commande et l'adresse de livraison restent consultables dans le
@@ -137,11 +137,11 @@ rien à faire manuellement pour celles-ci.
 
 ### Mettre à jour le fichier e-book
 
-Le PDF vendu est stocké dans le store Vercel Blob **`bxlm-blob`**, sous le
-chemin `ebooks/bxlm.pdf` (accès **privé** — personne ne peut le télécharger
+L'EPUB vendu est stocké dans le store Vercel Blob **`bxlm-blob`**, sous le
+chemin `ebooks/bxlm.epub` (accès **privé** — personne ne peut le télécharger
 sans passer par un paiement). Pour le remplacer : Vercel → Storage →
 `bxlm-blob` → Manage Blobs → uploadez le nouveau fichier au même chemin
-(`ebooks/bxlm.pdf`), ou changez `EBOOK_BLOB_PATH` dans
+(`ebooks/bxlm.epub`), ou changez `EBOOK_BLOB_PATH` dans
 `app/api/stripe-webhook/route.ts` si vous préférez un autre chemin.
 
 ### Passer du mode test au mode production Stripe
