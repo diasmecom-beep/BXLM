@@ -199,7 +199,7 @@ export const timeline: { when: string; title: string; text: string }[] = [
   {
     when: "2021 +",
     title: "Le voyage vers la Terre Mère",
-    text: "Change asbl emmène une centaine de jeunes en RDC : université de Kinshasa, Académie des Beaux-Arts, musées, agro-écologie. L’éducation à la citoyenneté mondiale comme prolongement de la rue.",
+    text: "Change asbl emmène une quinzaine de jeunes en RDC : université de Kinshasa, Académie des Beaux-Arts, musées, agro-écologie. L’éducation à la citoyenneté mondiale comme prolongement de la rue.",
   },
 ];
 
