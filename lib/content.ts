@@ -72,7 +72,7 @@ export const offers = {
      * aucun paiement réel n'est débité. Voir README.md § 5 pour passer en
      * production.
      */
-    paymentLink: "https://buy.stripe.com/test_3cI5kD6mv63q13v1i7ffy00",
+    paymentLink: "https://buy.stripe.com/7sYbJ16mvezWcMdbWLffy09",
     paymentCta: "Payer 10 € — recevoir l’e-book",
     lines: [
       {
@@ -112,7 +112,7 @@ export const offers = {
      * Lien de paiement Stripe (Payment Link), collecte l'adresse de
      * livraison. MODE TEST — voir README.md § 5 pour passer en production.
      */
-    paymentLink: "https://buy.stripe.com/test_dRm9AT7qz2RebI9gd1ffy01",
+    paymentLink: "https://buy.stripe.com/14AeVd3aj8by8vXgd1ffy0a",
     paymentCta: "Payer 12 € — commander l’exemplaire",
     lines: [
       { strong: "À l’unité", rest: " — 12 €, pour découvrir ou offrir" },
